@@ -1,6 +1,36 @@
 Release Notes
 =============
 
+## 3.6.0
+
+#### Bug fixes
+
+- Fixed a bug in the `subRouteCi` http handler, which prevented nested sub routes to be case insensitive.
+
+#### New features
+
+- Added two new `HttpContext` extension methods to retrieve cookie and form values:
+    - `GetCookieValue (key : string)`
+    - `GetFormValue (key : string)`
+
+## 3.5.1
+
+#### Bug fixes
+
+- Fixed a bug in Giraffe's model binding to not try to set read only properties anymore.
+
+## 3.5.0
+
+#### New features
+
+- Updated all packages and framework library dependencies to .NET Core 2.2.
+- Added a new `GET_HEAD` http handler (see: [#314](https://github.com/giraffe-fsharp/Giraffe/issues/314) for more info).
+- Added a new convenience function called `handleContext`, which can be used for creating new `HttpHandler` functions.
+
+#### Bug fixes
+
+- Fixed the `_data` attribute in the `GiraffeViewEngine` to accept a `key` and `value` parameter now.
+
 ## 3.4.0
 
 #### New features
